@@ -14,7 +14,7 @@ async def test_index_page_contain_valid_multipart_form(client):
     assert form is not None
     assert form.attrs['method'].lower() == 'post'
     assert form.attrs['enctype'].lower() == 'multipart/form-data'
-    submit = form.find('input', {'type': 'file'})
+    submit = form.find('button', {'type': 'submit'})
     assert submit is not None
 
 
